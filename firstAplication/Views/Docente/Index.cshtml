@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="~/Content/cssObligatorio.css" rel="stylesheet" />
+
+<link href="~/Content/datatables.css" rel="stylesheet" />
+<h2>Docente</h2>
+
+<label>Ingrese Modalidad de Contrato</label>
+<select id="dropModalidad">
+</select>
+<br />
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Agregar</button>
+<br />
+<br />
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Docente</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">ID Docente: </label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="txtIdDocente" placeholder="ID del Docente" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Nombre: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Apellido paterno: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtApaterno" placeholder="Apellido Paterno">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Apellido Materno: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtAmaterno" placeholder="Apellido Materno">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Direccion: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtDireccion" placeholder="Direccion">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Celular: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtCelular" placeholder="Telefono Celular">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Telefono: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="txtTelefono" placeholder="Telefono fijo">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Email: </label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="txtEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Sexo: </label>
+                        <div class="col-sm-8">
+                            <select id="dropPopSexo"></select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Fecha Contrato: </label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="txtFechaContrato" placeholder="Fecha de Contrato">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">ID Modalidad Contrato: </label>
+                        <div class="col-sm-8">
+                            <select id="dropPopModalidad"></select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-4 col-form-label">Foto: </label>
+                        <div class="col-sm-8 pl-xl-5">
+                            <img style="width:100px; height:100px; border:1px solid"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="agregar()" class="btn btn-success" id="btnAceptar" data-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="table">
+
+</div>
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/Docente.js"></script>
+<script src="~/Scripts/datatables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

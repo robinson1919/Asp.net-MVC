@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>Periodo</h2>
+<link href="~/Content/cssObligatorio.css" rel="stylesheet" />
+<link href="~/Content/datatables.css" rel="stylesheet" />
+@*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">*@
+
+<div class="form-group">
+    <label>Inserte el nombre del periodo</label>
+    <input type="text" id="inputText" placeholder="Text to serch for" />
+</div>
+<!-- Trigger the modal with a button -->
+<button type="button" onClick="openModal(0)" class="btn btn-info" data-toggle="modal" data-target="#myModal">Agregar</button>
+<br />
+<br />
+
+
+<div id="table">
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Periodo</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">ID Periodo: </label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="txtIdPeriodo" placeholder="ID del Periodo" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Nombre: </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Fecha Inicio: </label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control obligatorio" id="txtFechaInicio" placeholder="Fecha de Inicio">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Fecha Fin: </label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control obligatorio" id="txtFechaFin" placeholder="Fecha Final">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="agregar()" class="btn btn-success" id="btnAceptar">Aceptar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/Periodo.js"></script>
+<script src="~/Scripts/datatables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
